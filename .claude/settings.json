@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hook": ".claude/hooks/validate-file-length.sh"
+      },
+      {
+        "matcher": "Write",
+        "hook": ".claude/hooks/check-secrets.sh"
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hook": ".claude/hooks/doc-changes.sh"
+      }
+    ]
+  }
+}
